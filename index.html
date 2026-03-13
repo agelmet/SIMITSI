@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Δρ. Χριστίνα Σιμιτσή | Κλινική Ψυχολόγος & Συστημική Ψυχοθεραπεία | Αιγάλεω & Ιλίσια</title>
+    <meta name="description" content="Διδάκτωρ Κλινικής Δικαστικής Ψυχολογίας (PhD). Εξειδικευμένη συστημική ψυχοθεραπεία ενηλίκων, ζεύγους & εφήβων. Κλείστε ραντεβού στο Αιγάλεω ή στα Ιλίσια. Τηλ: 6945272966.">
+    <meta name="keywords" content="Ψυχολόγος Αιγάλεω, Ψυχολόγος Ιλίσια, Συστημική Ψυχοθεραπεία, Κλινική Δικαστική Ψυχολογία, Θεραπεία Ζεύγους, Διαχείριση Θυμού, Δρ Χριστίνα Σιμιτσή">
+    <meta name="author" content="Advon Media">
+    <meta property="og:title" content="Δρ. Χριστίνα Σιμιτσή | Κλινική Ψυχολόγος">
+    <meta property="og:image" content="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c24813c248f705d73.jpg">
+    <meta property="og:description" content="Εξειδικευμένη συστημική ψυχοθεραπεία σε Αιγάλεω και Ιλίσια.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699045c3c08665c4c5ca0c49.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            900: '#2a534f', // Primary Dark
+                            800: '#345e5a',
+                        },
+                        sand: {
+                            100: '#fdf6f0',
+                            200: '#eaceb8', // Primary Light/Gold
+                            300: '#dcbfa8',
+                        },
+                        olive: {
+                            500: '#696b5d', // Accent
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'marble': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknPjxmaWx0ZXIgaWQ9J25vaXNlJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC41JyBudW1PY3RhdmVzPScxJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJyAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIG9wYWNpdHk9JzAuMDUnIC8+PC9zdmc+')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for aesthetics that Tailwind doesn't cover easily */
+        body {
+            background-color: #fdf6f0;
+            color: #2a534f;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf6f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a534f;
+            border-radius: 4px;
+        }
+
+        /* Text Selection */
+        ::selection {
+            background: #2a534f;
+            color: #eaceb8;
+        }
+
+        /* Typography - Strict No Accents on Uppercase */
+        .no-accent-uppercase {
+            text-transform: uppercase;
+        }
+        
+        /* Smooth Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glass-panel-dark {
+            background: rgba(42, 83, 79, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Image Hover Effects */
+        .img-hover-zoom {
+            overflow: hidden;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.7s ease;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Custom Cursor Concept (Optional, kept subtle) */
+        button, a {
+            cursor: pointer;
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans relative overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div id="navbar-bg" class="absolute inset-0 bg-sand-100/80 backdrop-blur-md border-b border-emerald-900/10"></div>
+        <div class="container mx-auto px-6 py-4 relative flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699045c3c08665c4c5ca0c49.png" 
+                     alt="Dr. Christina Simitsi Logo" 
+                     class="h-12 w-auto drop-shadow-md transition-transform duration-500 group-hover:rotate-6">
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-xl text-emerald-900 leading-none tracking-wide no-accent-uppercase">ΔΡ. ΧΡΙΣΤΙΝΑ ΣΙΜΙΤΣΗ</span>
+                    <span class="text-xs text-olive-500 tracking-[0.2em] no-accent-uppercase">ΚΛΙΝΙΚΗ ΔΙΚΑΣΤΙΚΗ ΨΥΧΟΛΟΓΟΣ ΚΑΙ ΣΥΣΤΗΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#about" class="text-emerald-900 hover:text-olive-500 text-sm font-medium tracking-widest transition-colors no-accent-uppercase">ΒΙΟΓΡΑΦΙΚΟ</a>
+                <a href="#services" class="text-emerald-900 hover:text-olive-500 text-sm font-medium tracking-widest transition-colors no-accent-uppercase">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#spaces" class="text-emerald-900 hover:text-olive-500 text-sm font-medium tracking-widest transition-colors no-accent-uppercase">ΧΩΡΟΙ</a>
+                <a href="#reviews" class="text-emerald-900 hover:text-olive-500 text-sm font-medium tracking-widest transition-colors no-accent-uppercase">ΑΞΙΟΛΟΓΗΣΕΙΣ</a>
+                <a href="#contact" class="bg-emerald-900 text-sand-200 px-6 py-3 rounded-sm font-serif italic hover:bg-emerald-800 transition-all duration-300 shadow-lg hover:shadow-emerald-900/30 flex items-center gap-2">
+                    <span>Κλείστε Ραντεβού</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden text-emerald-900" id="mobile-menu-btn">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="fixed inset-0 bg-emerald-900 z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8" id="mobile-menu">
+            <button class="absolute top-6 right-6 text-sand-200" id="close-menu-btn">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <a href="#about" class="text-2xl font-serif text-sand-200 no-accent-uppercase mobile-link">ΒΙΟΓΡΑΦΙΚΟ</a>
+            <a href="#services" class="text-2xl font-serif text-sand-200 no-accent-uppercase mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#spaces" class="text-2xl font-serif text-sand-200 no-accent-uppercase mobile-link">ΧΩΡΟΙ</a>
+            <a href="#reviews" class="text-2xl font-serif text-sand-200 no-accent-uppercase mobile-link">ΑΞΙΟΛΟΓΗΣΕΙΣ</a>
+            <a href="#contact" class="text-2xl font-serif text-sand-200 italic mobile-link border-b border-sand-200 pb-1">Επικοινωνία</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Image with Stronger Left Shadow (Gradient) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de90502f92641.jpg" 
+                 alt="Therapy Office Background" 
+                 class="w-full h-full object-cover">
+             <!-- Stronger white/sand gradient on the left to act as a "shadow" for visibility -->
+             <div class="absolute inset-0 bg-gradient-to-r from-sand-100/95 via-sand-100/60 to-transparent"></div> 
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="reveal p-4 md:p-0">
+                <div class="inline-block px-3 py-1 border border-emerald-900 rounded-full mb-6 bg-sand-100/80 backdrop-blur-sm">
+                    <span class="text-emerald-900 text-xs font-bold tracking-[0.2em] no-accent-uppercase">ΚΛΙΝΙΚΗ ΔΙΚΑΣΤΙΚΗ ΨΥΧΟΛΟΓΟΣ ΚΑΙ ΣΥΣΤΗΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ</span>
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-7xl text-emerald-900 leading-tight mb-6 drop-shadow-md lg:drop-shadow-sm">
+                    Ανακαλύψτε την <br>
+                    <span class="italic text-olive-500">εσωτερική</span> σας δύναμη.
+                </h1>
+                <p class="text-emerald-900 text-lg lg:text-xl max-w-lg mb-10 leading-relaxed font-medium drop-shadow-sm">
+                    Κατανόηση, σύνδεση και αλλαγή. Δημιουργούμε μαζί έναν ασφαλή χώρο εμπιστοσύνης, όπου η επιστημονική γνώση συναντά την ανθρώπινη ενσυναίσθηση, με στόχο την ουσιαστική κατανόηση και την προσωπική εξέλιξη.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-emerald-900 text-sand-200 px-8 py-4 text-center font-serif italic hover:bg-emerald-800 transition-all shadow-xl hover:translate-y-[-2px]">
+                        Κλείστε Ραντεβού
+                    </a>
+                    <a href="#about" class="border border-emerald-900 text-emerald-900 px-8 py-4 text-center font-sans tracking-wider text-sm font-semibold hover:bg-emerald-900 hover:text-sand-200 transition-all no-accent-uppercase flex items-center justify-center gap-2 bg-sand-100/40 backdrop-blur-sm">
+                        ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portrait Image with Effect -->
+            <div class="relative lg:h-[80vh] flex items-end justify-center lg:justify-end reveal delay-200">
+                <div class="relative w-full max-w-md">
+                    <!-- Decorative Frame -->
+                    <div class="absolute inset-0 border-2 border-emerald-900/40 translate-x-4 translate-y-4 rounded-t-[10rem]"></div>
+                    <!-- Image -->
+                    <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c24813c248f705d73.jpg" 
+                         alt="Δρ. Χριστίνα Σιμιτσή" 
+                         class="relative z-10 w-full h-auto object-cover rounded-t-[10rem] shadow-2xl transition-all duration-700">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -left-6 bottom-20 z-20 bg-sand-200 p-6 shadow-xl max-w-[200px] animate-pulse-slow hidden md:block">
+                        <p class="font-serif text-emerald-900 text-lg italic">"Κάθε άνθρωπος έχει μια ιστορία που αξίζει να ακουστεί."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-sand-100/50 z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            
+            <!-- Mobile Heading (Visible only on mobile to control order) -->
+            <div class="block lg:hidden text-center mb-8 reveal">
+                <h2 class="text-olive-500 font-bold tracking-[0.2em] mb-4 text-sm no-accent-uppercase border-b border-olive-500 inline-block pb-1">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</h2>
+                <h3 class="font-serif text-3xl text-emerald-900 leading-tight">
+                    Διδάκτωρ Κλινικής Δικαστικής Ψυχολογίας & <span class="italic text-olive-500">Συστημική Ψυχοθεραπεία</span>
+                </h3>
+            </div>
+
+            <!-- Changed layout to be more symmetric: Equal columns, vertically centered -->
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                
+                <!-- Image Column -->
+                <div class="reveal">
+                    <div class="relative group">
+                        <!-- Wider Image with symmetric framing -->
+                        <div class="absolute -inset-4 border border-emerald-900/10 rounded-sm transform rotate-2 transition-transform duration-500 group-hover:rotate-0"></div>
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de911f2f9263e.jpg" 
+                             alt="Dr Simitsi Office" 
+                             class="relative z-10 w-full aspect-[4/3] object-cover object-center shadow-lg rounded-sm">
+                        <div class="absolute -bottom-6 -left-6 bg-emerald-900 text-sand-200 p-8 shadow-xl max-w-xs z-20 hidden md:block">
+                            <span class="text-sm tracking-widest no-accent-uppercase leading-relaxed block">ΠΟΛΥΕΤΗΣ ΚΛΙΝΙΚΗ ΕΜΠΕΙΡΙΑ ΚΑΙ ΑΚΑΔΗΜΑΪΚΗ & ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="reveal delay-100">
+                    <div class="max-w-xl mx-auto">
+                        <!-- Desktop Heading (Hidden on mobile) -->
+                        <div class="hidden lg:block mb-8">
+                            <h2 class="text-olive-500 font-bold tracking-[0.2em] mb-4 text-sm no-accent-uppercase border-b border-olive-500 inline-block pb-1">ΣΧΕΤΙΚΑ ΜΕ ΕΜΕΝΑ</h2>
+                            <h3 class="font-serif text-4xl text-emerald-900 leading-tight">
+                                Διδάκτωρ Κλινικής Δικαστικής Ψυχολογίας & <span class="italic text-olive-500">Συστημική Ψυχοθεραπεία</span>
+                            </h3>
+                        </div>
+                        
+                        <!-- Justified text for symmetry -->
+                        <div class="space-y-6 text-emerald-900/80 leading-relaxed font-light text-lg text-justify">
+                            <p>
+                                Ονομάζομαι Χριστίνα Σιμιτσή και είμαι Κλινική Δικαστική Ψυχολόγος (PhD) και Συστημική Ψυχοθεραπεύτρια. Διατηρώ ιδιωτικό γραφείο στο Αιγάλεω και είμαι συνιδιοκτήτρια του Κέντρου Ψυχοθεραπείας και Συμβουλευτικής Ενηλίκων «Δια Ψυχής» στα Ιλίσια. Είμαι κάτοχος BSc Ψυχολογίας και MSc Κλινικής Ψυχολογίας από το University of Wales, καθώς και MSc Ανακριτικής Ψυχολογίας και διδακτορικού (PhD) στην Κλινική Δικαστική Ψυχολογία από το University of Huddersfield.
+                            </p>
+                            <p>
+                                Ως Συστημική Ψυχοθεραπεύτρια, προσεγγίζω τον άνθρωπο ολιστικά, μέσα στο πλαίσιο των σχέσεών του. Εξειδικεύομαι στη διαχείριση σύνθετων ζητημάτων όπως ο θυμός, η επιθετικότητα, η ενδοοικογενειακή βία, οι τραυματικές εμπειρίες καθώς και σε συναισθηματικές και άλλες ψυχιατρικές διαταραχές.
+                            </p>
+                            <p>
+                                Πέρα από την κλινική μου πράξη, δραστηριοποιούμαι στον ακαδημαϊκό χώρο της ψυχολογίας ως διδάσκουσα και υπεύθυνη προπτυχιακών και μεταπτυχιακών προγραμμάτων σπουδών από το 2016, διατηρώντας στενή επαφή με τις ακαδημαϊκές και ερευνητικές εξελίξεις.
+                            </p>
+                            <p>
+                                Για το αναλυτικό βιογραφικό μπορείτε να μεταβείτε στην σελίδα στο <a href="https://www.doctoranytime.gr/d/Psychologos/simitsi-xristina" target="_blank" class="text-emerald-900 font-semibold hover:underline">DoctorAnytime</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Credentials (The "Wow" Animations) -->
+    <section class="py-20 bg-emerald-900 text-sand-200 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Credential 1 -->
+                <div class="p-8 border border-sand-200/20 hover:border-sand-200 hover:bg-white/5 transition-all duration-500 group reveal">
+                    <i data-lucide="graduation-cap" class="w-10 h-10 mb-6 text-sand-200 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-serif text-xl mb-3">Διδακτορικό επίπεδο (PhD)</h4>
+                    <p class="text-sm text-sand-200/70 font-light leading-relaxed">
+                        Εξιδικευμένη γνώση και έρευνα στην Κλινική Δικαστική Ψυχολογία από το University of Huddersfield.
+                    </p>
+                </div>
+
+                <!-- Credential 2 -->
+                <div class="p-8 border border-sand-200/20 hover:border-sand-200 hover:bg-white/5 transition-all duration-500 group reveal delay-100">
+                    <i data-lucide="award" class="w-10 h-10 mb-6 text-sand-200 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-serif text-xl mb-3">Επαγγελματικές Πιστοποιήσεις</h4>
+                    <p class="text-sm text-sand-200/70 font-light leading-relaxed">
+                        ✓ Άδεια Ασκήσεως Επαγγέλματος Ψυχολόγου (Ελλάδα) - Αρ. Άδειας: 1476647<br>
+                        ✓ Chartered Psychologist – British Psychological Society (BPS)<br>
+                        ✓ Registered Practitioner Psychologist – HCPC
+                    </p>
+                </div>
+
+                <!-- Credential 3 -->
+                <div class="p-8 border border-sand-200/20 hover:border-sand-200 hover:bg-white/5 transition-all duration-500 group reveal delay-200">
+                    <i data-lucide="brain-circuit" class="w-10 h-10 mb-6 text-sand-200 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-serif text-xl mb-3">Εξειδίκευση σε «Δύσκολα» θέματα</h4>
+                    <p class="text-sm text-sand-200/70 font-light leading-relaxed">
+                        Εξειδίκευση στη διαχείριση θυμού, επιθετικότητας, ενδοοικογενειακής βίας, τραυματικών εμπειριών καθώς και συναισθηματικών και άλλων ψυχιατρικών διαταραχών.
+                    </p>
+                </div>
+
+                <!-- Credential 4 -->
+                <div class="p-8 border border-sand-200/20 hover:border-sand-200 hover:bg-white/5 transition-all duration-500 group reveal delay-300">
+                    <i data-lucide="library" class="w-10 h-10 mb-6 text-sand-200 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-serif text-xl mb-3">Ακαδημαϊκή και Ερευνητική Εμπειρία</h4>
+                    <p class="text-sm text-sand-200/70 font-light leading-relaxed">
+                        Διδάσκουσα και υπεύθυνη προπτυχιακών και μεταπτυχιακών προγραμμάτων σπουδών από το 2016.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-sand-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-serif text-4xl lg:text-5xl text-emerald-900 mb-6">Υπηρεσίες Ψυχοθεραπείας</h2>
+                <p class="text-emerald-900/80 max-w-3xl mx-auto text-lg leading-relaxed">
+                    Οι υπηρεσίες ψυχοθεραπείας βασίζονται στη συστημική προσέγγιση, η οποία εξετάζει τον άνθρωπο μέσα στο πλαίσιο των σχέσεων και των εμπειριών του. Στόχος είναι η κατανόηση των δυσκολιών και η ανάπτυξη νέων, πιο λειτουργικών τρόπων σύνδεσης με τον εαυτό και τους άλλους.
+                </p>
+                <div class="mt-8 inline-flex items-center gap-3 bg-olive-500/10 text-olive-500 px-6 py-3 rounded-full font-semibold text-sm tracking-wider no-accent-uppercase border border-olive-500/20">
+                    <i data-lucide="video" class="w-5 h-5"></i>
+                    Τόσο δια ζώσης όσο και διαδικτυακές συνεδρίες
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-10 shadow-lg hover:shadow-2xl transition-all duration-500 reveal group cursor-default">
+                    <div class="w-12 h-12 bg-sand-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-900 transition-colors">
+                        <i data-lucide="user" class="text-emerald-900 group-hover:text-sand-200"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-emerald-900 mb-4 h-16">Ατομική Ψυχοθεραπεία Ενηλίκων</h3>
+                    <div class="text-xs font-bold text-olive-500 mb-4 tracking-wider no-accent-uppercase">ΔΙΑΡΚΕΙΑ: 50 ΛΕΠΤΑ</div>
+                    <p class="text-emerald-900/70 mb-6 leading-relaxed text-sm">
+                        Η θεραπευτική διαδικασία προσφέρει έναν ασφαλή χώρο διερεύνησης σκέψεων, συναισθημάτων και εμπειριών. Μέσα από την κατανόηση των προσωπικών και διαπροσωπικών μοτίβων, υποστηρίζεται η ανάπτυξη νέων τρόπων αντιμετώπισης των δυσκολιών.
+                    </p>
+                    <ul class="text-sm text-emerald-900 space-y-2 mb-8 border-t border-sand-200 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Ατομικές συνεδρίες ενηλίκων</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Διαχείριση άγχους και συναισθηματικών δυσκολιών</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-emerald-900 p-10 shadow-lg transform lg:-translate-y-4 hover:shadow-2xl transition-all duration-500 reveal delay-100 group cursor-default relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="heart-handshake" class="w-32 h-32 text-sand-200"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-sand-200 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="text-emerald-900"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-sand-200 mb-4 h-16">Θεραπεία Ζεύγους</h3>
+                    <div class="text-xs font-bold text-sand-200/70 mb-4 tracking-wider no-accent-uppercase">ΔΙΑΡΚΕΙΑ: 80 ΛΕΠΤΑ</div>
+                    <p class="text-sand-100/80 mb-6 leading-relaxed text-sm">
+                        Η θεραπεία ζεύγους εστιάζει στη διερεύνηση των μοτίβων επικοινωνίας και αλληλεπίδρασης που διαμορφώνονται μέσα στη σχέση. Στόχος είναι η κατανόηση των αναγκών και των προσδοκιών κάθε μέλους και η ενίσχυση πιο λειτουργικών τρόπων επικοινωνίας.
+                    </p>
+                    <ul class="text-sm text-sand-100 space-y-2 mb-8 border-t border-sand-200/20 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sand-200"></i> Συνεδρίες θεραπείας ζεύγους</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sand-200"></i> Υποστήριξη σε θέματα επικοινωνίας, συγκρούσεων και σχέσης</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 shadow-lg hover:shadow-2xl transition-all duration-500 reveal delay-200 group cursor-default">
+                    <div class="w-12 h-12 bg-sand-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-900 transition-colors">
+                        <i data-lucide="home" class="text-emerald-900 group-hover:text-sand-200"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-emerald-900 mb-4 h-16">Οικογενειακή Θεραπεία</h3>
+                    <div class="text-xs font-bold text-olive-500 mb-4 tracking-wider no-accent-uppercase">ΔΙΑΡΚΕΙΑ: 80 ΛΕΠΤΑ</div>
+                    <p class="text-emerald-900/70 mb-6 leading-relaxed text-sm">
+                        Η οικογενειακή θεραπεία διερευνά τις δυναμικές και τις σχέσεις μεταξύ των μελών της οικογένειας. Δημιουργείται ένας χώρος όπου τα μέλη μπορούν να εκφραστούν, να κατανοήσουν τα μοτίβα επικοινωνίας και να ενισχύσουν τη συνεργασία μεταξύ τους.
+                    </p>
+                    <ul class="text-sm text-emerald-900 space-y-2 mb-8 border-t border-sand-200 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Συνεδρίες οικογενειακής θεραπείας</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Υποστήριξη σε θέματα οικογενειακής επικοινωνίας και σχέσεων</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 shadow-lg hover:shadow-2xl transition-all duration-500 reveal group cursor-default">
+                    <div class="w-12 h-12 bg-sand-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-900 transition-colors">
+                        <i data-lucide="sprout" class="text-emerald-900 group-hover:text-sand-200"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-emerald-900 mb-4 h-16">Ατομική Συστημική Ψυχοθεραπεία Εφήβων (15+)</h3>
+                    <div class="text-xs font-bold text-olive-500 mb-4 tracking-wider no-accent-uppercase">ΔΙΑΡΚΕΙΑ: 50 ΛΕΠΤΑ</div>
+                    <p class="text-emerald-900/70 mb-6 leading-relaxed text-sm">
+                        Η θεραπεία εφήβων λαμβάνει υπόψη το αναπτυξιακό στάδιο της εφηβείας και το πλαίσιο των σχέσεων μέσα στο οποίο εξελίσσεται ο έφηβος. Προσφέρει έναν ασφαλή χώρο έκφρασης και κατανόησης των εμπειριών και των συναισθημάτων του, ενώ παράλληλα βοηθά στην κατανόηση των σχέσεων με την οικογένεια, το σχολείο και το κοινωνικό περιβάλλον.
+                    </p>
+                    <ul class="text-sm text-emerald-900 space-y-2 mb-8 border-t border-sand-200 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Ατομικές συνεδρίες εφήβων (15+)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Υποστήριξη σε θέματα ταυτότητας, άγχους και διαπροσωπικών σχέσεων</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-10 shadow-lg hover:shadow-2xl transition-all duration-500 reveal delay-100 group cursor-default">
+                    <div class="w-12 h-12 bg-sand-200 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-900 transition-colors">
+                        <i data-lucide="network" class="text-emerald-900 group-hover:text-sand-200"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-emerald-900 mb-4 h-16">Ομαδική Θεραπεία</h3>
+                    <div class="text-xs font-bold text-olive-500 mb-4 tracking-wider no-accent-uppercase">ΔΙΑΡΚΕΙΑ: 120 ΛΕΠΤΑ</div>
+                    <p class="text-emerald-900/70 mb-6 leading-relaxed text-sm">
+                        Η ομαδική θεραπεία προσφέρει έναν χώρο συνάντησης και αλληλεπίδρασης, όπου τα μέλη της ομάδας μπορούν να μοιραστούν εμπειρίες και να διερευνήσουν τα μοτίβα σχέσεων που αναδύονται μέσα στην ομάδα. Η δυναμική της ομάδας λειτουργεί ως πεδίο κατανόησης, ανατροφοδότησης και ανάπτυξης νέων τρόπων σύνδεσης με τον εαυτό και τους άλλους.
+                    </p>
+                    <ul class="text-sm text-emerald-900 space-y-2 mb-8 border-t border-sand-200 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Θεραπευτικές ομάδες ενηλίκων</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-olive-500"></i> Ενίσχυση αυτογνωσίας και διαπροσωπικών δεξιοτήτων</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap (Redesigned) -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl text-center text-emerald-900 mb-20 reveal">Η Διαδρομή της Θεραπείας</h2>
+            
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Connected Line (Desktop) -->
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-900/30 to-transparent"></div>
+                
+                <div class="grid lg:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="group relative reveal">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 bg-white border-4 border-emerald-900 rounded-full flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-lg mb-8">
+                                <span class="font-serif text-3xl text-emerald-900 italic">01</span>
+                            </div>
+                            <div class="bg-sand-100 p-8 rounded-sm shadow-md border border-sand-200 w-full min-h-[200px] flex flex-col justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                                <h4 class="font-serif text-xl text-emerald-900 mb-3 border-b border-emerald-900/10 pb-2">Επικοινωνία</h4>
+                                <p class="text-sm text-emerald-900/70 leading-relaxed">Η πρώτη μας επαφή. Ένα τηλεφώνημα για να γνωριστούμε και να βρούμε την κατάλληλη ώρα για εσάς.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="group relative reveal delay-100">
+                        <div class="flex flex-col items-center text-center">
+                             <div class="w-24 h-24 bg-white border-4 border-emerald-900 rounded-full flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-lg mb-8">
+                                <span class="font-serif text-3xl text-emerald-900 italic">02</span>
+                            </div>
+                            <div class="bg-sand-100 p-8 rounded-sm shadow-md border border-sand-200 w-full min-h-[200px] flex flex-col justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                                <h4 class="font-serif text-xl text-emerald-900 mb-3 border-b border-emerald-900/10 pb-2">Αξιολόγηση</h4>
+                                <p class="text-sm text-emerald-900/70 leading-relaxed">Στην πρώτη μας συνεδρία, ακούμε το αίτημά σας, λαμβάνουμε το ιστορικό και θέτουμε τις βάσεις της συνεργασίας.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="group relative reveal delay-200">
+                        <div class="flex flex-col items-center text-center">
+                             <div class="w-24 h-24 bg-white border-4 border-emerald-900 rounded-full flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-lg mb-8">
+                                <span class="font-serif text-3xl text-emerald-900 italic">03</span>
+                            </div>
+                            <div class="bg-sand-100 p-8 rounded-sm shadow-md border border-sand-200 w-full min-h-[200px] flex flex-col justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                                <h4 class="font-serif text-xl text-emerald-900 mb-3 border-b border-emerald-900/10 pb-2">Θεραπευτικό Πλάνο</h4>
+                                <p class="text-sm text-emerald-900/70 leading-relaxed">Σχεδιάζουμε μαζί τους στόχους της θεραπείας και καθορίζουμε τη συχνότητα των συναντήσεών μας.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="group relative reveal delay-300">
+                        <div class="flex flex-col items-center text-center">
+                             <div class="w-24 h-24 bg-white border-4 border-emerald-900 rounded-full flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110 shadow-lg mb-8">
+                                <span class="font-serif text-3xl text-emerald-900 italic">04</span>
+                            </div>
+                            <div class="bg-sand-100 p-8 rounded-sm shadow-md border border-sand-200 w-full min-h-[200px] flex flex-col justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                                <h4 class="font-serif text-xl text-emerald-900 mb-3 border-b border-emerald-900/10 pb-2">Εξέλιξη</h4>
+                                <p class="text-sm text-emerald-900/70 leading-relaxed">Μέσα από τη σταθερή μας πορεία, εργαζόμαστε για την αυτογνωσία, την αλλαγή και την ψυχική σας ενδυνάμωση.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spaces Gallery -->
+    <section id="spaces" class="py-24 bg-emerald-900 text-sand-200">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl lg:text-5xl text-center mb-4">Οι Χώροι Μας</h2>
+            <p class="text-center text-sand-200/60 mb-16 max-w-2xl mx-auto font-light">
+                Έχουμε δημιουργήσει δύο μοναδικούς χώρους υψηλής αισθητικής και ηρεμίας, σχεδιασμένους να προσφέρουν ασφάλεια και χαλάρωση.
+            </p>
+
+            <!-- Aigaleo -->
+            <div class="mb-20 reveal">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-px bg-sand-200/30 flex-1"></div>
+                    <h3 class="font-serif text-3xl text-sand-200 italic tracking-wider no-accent-uppercase">ΑΙΓΑΛΕΩ</h3>
+                    <div class="h-px bg-sand-200/30 flex-1"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(0, 'aigaleo')">
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de90502f92641.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(1, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de9c778f92640.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(2, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9899b88b7787fd609.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(3, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9c086657ccec9eac3.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(4, 'aigaleo')">
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de97ba9f9263f.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(5, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9008498b5e4662646.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(6, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9899b88c7057fd608.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-square bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(7, 'aigaleo')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e900849874b0662647.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ilisia -->
+            <div class="reveal">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-px bg-sand-200/30 flex-1"></div>
+                    <h3 class="font-serif text-3xl text-sand-200 italic tracking-wider no-accent-uppercase">ΙΛΙΣΙΑ</h3>
+                    <div class="h-px bg-sand-200/30 flex-1"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                     <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(0, 'ilisia')">
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c899b8801227fe27d.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(1, 'ilisia')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c772de90b1bf93179.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(2, 'ilisia')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449cc086658ea2c9f6db.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(3, 'ilisia')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c899b884f1a7fe27f.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(4, 'ilisia')">
+                         <img src="https://picsum.photos/seed/office-degrees/800/600" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="img-hover-zoom cursor-pointer aspect-video bg-emerald-800 rounded-sm overflow-hidden" onclick="openLightbox(5, 'ilisia')">
+                         <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c24813c1062705d74.jpg" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Carousel -->
+    <section id="reviews" class="py-24 bg-sand-100 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl text-emerald-900 text-center mb-12">Μερικές Αξιολογήσεις</h2>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <button id="prevReview" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-sand-200 transition-colors z-10">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button id="nextReview" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 hidden md:flex w-10 h-10 items-center justify-center rounded-full border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-sand-200 transition-colors z-10">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+
+                <!-- Scroll Container -->
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide" id="reviewsContainer" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    
+                    <!-- Review Card Template -->
+                    <div class="snap-center shrink-0 w-full md:w-[400px] bg-white p-8 shadow-lg border-t-4 border-emerald-900 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex text-yellow-500">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="font-bold text-emerald-900 text-lg">10.0</span>
+                            </div>
+                            <p class="text-emerald-900/80 italic mb-6">"Εξαιρετικα προσιτη και καταρτισμενη επαγγελματιας με ποιοτητα και ενεπνευση εμπιστοσυνης"</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div>
+                                <h5 class="font-bold text-emerald-900 text-sm">Δήμητρα</h5>
+                                <span class="text-xs text-gray-500">13 Ιανουαρίου 2026</span>
+                            </div>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 opacity-70">
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="snap-center shrink-0 w-full md:w-[400px] bg-white p-8 shadow-lg border-t-4 border-emerald-900 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex text-yellow-500">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="font-bold text-emerald-900 text-lg">9.8</span>
+                            </div>
+                            <p class="text-emerald-900/80 italic mb-6">"Μου ενέπνευσε εμπιστοσύνη από την ώρα που μπήκα στο γραφείο. Χαμογελο, συνέπεια, ευγένια και κατανόηση."</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div>
+                                <h5 class="font-bold text-emerald-900 text-sm">Ισαβέλλα</h5>
+                                <span class="text-xs text-gray-500">09 Ιανουαρίου 2026</span>
+                            </div>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 opacity-70">
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="snap-center shrink-0 w-full md:w-[400px] bg-white p-8 shadow-lg border-t-4 border-emerald-900 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex text-yellow-500">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="font-bold text-emerald-900 text-lg">10.0</span>
+                            </div>
+                            <p class="text-emerald-900/80 italic mb-6">"Μου κέρδισε την εμπιστοσύνη κατευθείαν και ανυπομονώ για το επόμενο ραντεβού μαζί της."</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div>
+                                <h5 class="font-bold text-emerald-900 text-sm">Maria</h5>
+                                <span class="text-xs text-gray-500">19 Δεκεμβρίου 2025</span>
+                            </div>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 opacity-70">
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="snap-center shrink-0 w-full md:w-[400px] bg-white p-8 shadow-lg border-t-4 border-emerald-900 flex flex-col justify-between">
+                         <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex text-yellow-500">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="font-bold text-emerald-900 text-lg">10.0</span>
+                            </div>
+                            <p class="text-emerald-900/80 italic mb-6">"Εξαιρετική επιστήμονας, αναλυτική, ακούει μ ενδιαφέρον και βοηθάει πάντα!"</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div>
+                                <h5 class="font-bold text-emerald-900 text-sm">Έφη</h5>
+                                <span class="text-xs text-gray-500">18 Δεκεμβρίου 2025</span>
+                            </div>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 opacity-70">
+                        </div>
+                    </div>
+                     <!-- Review 5 -->
+                     <div class="snap-center shrink-0 w-full md:w-[400px] bg-white p-8 shadow-lg border-t-4 border-emerald-900 flex flex-col justify-between">
+                        <div>
+                           <div class="flex items-center justify-between mb-4">
+                               <div class="flex text-yellow-500">
+                                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                               </div>
+                               <span class="font-bold text-emerald-900 text-lg">10.0</span>
+                           </div>
+                           <p class="text-emerald-900/80 italic mb-6">"Η Χριστίνα με βοήθησε να καταλάβω κάποιες σχέσεις και επιρροές του στενου μου περιβαλλοντος."</p>
+                       </div>
+                       <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                           <div>
+                               <h5 class="font-bold text-emerald-900 text-sm">Μάχη</h5>
+                               <span class="text-xs text-gray-500">18 Νοεμβρίου 2025</span>
+                           </div>
+                           <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 opacity-70">
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.doctoranytime.gr/d/Psychologos/simitsi-xristina" target="_blank" class="inline-flex items-center gap-2 text-emerald-900 border border-emerald-900 px-6 py-3 hover:bg-emerald-900 hover:text-white transition-all font-semibold text-sm">
+                    ΠΕΡΙΣΣΟΤΕΡΕΣ ΑΞΙΟΛΟΓΗΣΕΙΣ
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-emerald-900 text-sand-200 relative pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-5xl mb-16 text-center">Επικοινωνία</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-16 mb-20">
+                
+                <!-- Left Column: Contact Details -->
+                <div class="reveal">
+                    <div class="bg-emerald-800/20 p-8 rounded-sm border border-emerald-800 h-full flex flex-col justify-between">
+                        <div>
+                             <h3 class="font-serif text-3xl mb-8 border-b border-sand-200/10 pb-4">Στοιχεία Επικοινωνίας</h3>
+                             
+                             <div class="space-y-8">
+                                <div class="flex items-start gap-6">
+                                    <div class="bg-sand-200/10 p-4 rounded-full">
+                                        <i data-lucide="phone" class="w-6 h-6 text-sand-200"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif text-xl mb-2">Τηλέφωνο</h4>
+                                        <a href="tel:6945272966" class="text-sand-200/70 hover:text-sand-200 transition-colors text-lg">6945 272 966</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-6">
+                                    <div class="bg-sand-200/10 p-4 rounded-full">
+                                        <i data-lucide="mail" class="w-6 h-6 text-sand-200"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif text-xl mb-2">Email</h4>
+                                        <a href="mailto:simitsi.psy@gmail.com" class="text-sand-200/70 hover:text-sand-200 transition-colors text-lg">simitsi.psy@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-6">
+                                    <div class="bg-sand-200/10 p-4 rounded-full">
+                                        <i data-lucide="clock" class="w-6 h-6 text-sand-200"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif text-xl mb-2">Ωράριο</h4>
+                                        <p class="text-sand-200/70 font-light no-accent-uppercase">Δευτέρα – Παρασκευή 10.00-21.00</p>
+                                        <p class="text-sand-200/70 font-light italic mb-4">Κατόπιν Ραντεβού</p>
+                                        
+                                        <!-- Added text per request -->
+                                        <div class="mt-8 pt-6 border-t border-sand-200/10">
+                                            <p class="text-sand-200/60 leading-relaxed text-sm">
+                                                Είμαστε εδώ για να λύσουμε κάθε απορία σας. Μην διστάσετε να επικοινωνήσετε μαζί μας για να συζητήσουμε πώς μπορούμε να σας βοηθήσουμε ή για να προγραμματίσετε την πρώτη σας συνεδρία.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex gap-6">
+                            <a href="https://www.linkedin.com/in/christina-simitsi/?originalSubdomain=gr" target="_blank" class="w-16 h-16 border border-sand-200/30 flex items-center justify-center rounded-full hover:bg-sand-200 hover:text-emerald-900 transition-all">
+                                <i data-lucide="linkedin" class="w-7 h-7"></i>
+                            </a>
+                            <a href="https://www.instagram.com/drsimitsi.christina/" target="_blank" class="w-16 h-16 border border-sand-200/30 flex items-center justify-center rounded-full hover:bg-sand-200 hover:text-emerald-900 transition-all">
+                                <i data-lucide="instagram" class="w-7 h-7"></i>
+                            </a>
+                            <a href="https://www.doctoranytime.gr/d/Psychologos/simitsi-xristina" target="_blank" class="w-16 h-16 border border-sand-200/30 flex items-center justify-center rounded-full hover:bg-sand-200 hover:text-emerald-900 transition-all p-3">
+                                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="w-full h-full invert brightness-0">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Locations & Maps -->
+                <div class="reveal delay-100">
+                    <div class="space-y-8">
+                        <!-- Location 1: Aigaleo -->
+                        <div class="bg-emerald-800/20 border border-emerald-800 p-6 rounded-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="map-pin" class="text-sand-200"></i>
+                                <h4 class="font-serif text-xl text-sand-200">Αιγάλεω</h4>
+                            </div>
+                            <p class="text-sand-200/80 mb-4 font-light">Πλαστήρα Νικολάου 35, Αιγάλεω, Αττική</p>
+                            <div class="w-full h-48 bg-emerald-900/50 rounded-sm overflow-hidden border border-emerald-900/50">
+                                <iframe 
+                                    width="100%" 
+                                    height="100%" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    marginheight="0" 
+                                    marginwidth="0" 
+                                    src="https://maps.google.com/maps?q=Nikolaou+Plastira+35,+Egaleo&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- Location 2: Ilisia -->
+                        <div class="bg-emerald-800/20 border border-emerald-800 p-6 rounded-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="map-pin" class="text-sand-200"></i>
+                                <h4 class="font-serif text-xl text-sand-200">Ιλίσια</h4>
+                            </div>
+                             <p class="text-sand-200/80 mb-4 font-light">Θέτιδος 10, Ιλίσια, Αττική</p>
+                            <div class="w-full h-48 bg-emerald-900/50 rounded-sm overflow-hidden border border-emerald-900/50">
+                                 <iframe 
+                                    width="100%" 
+                                    height="100%" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    marginheight="0" 
+                                    marginwidth="0" 
+                                    src="https://maps.google.com/maps?q=Thetidos+10,+Ilisia&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-sand-200/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-sand-200/40">
+                <p>&copy; 2026 Dr. Christina Simitsi. All rights reserved.</p>
+                <p>Designed by <a href="https://advonmedia.com" target="_blank" class="hover:text-sand-200 transition-colors">Advon Media</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-emerald-900/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-sand-200 hover:text-white">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <div class="relative w-full max-w-5xl px-6 h-[80vh] flex justify-center items-center">
+             <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain shadow-2xl rounded-sm">
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('translate-x-full');
+            if (isHidden) {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        const navbarBg = document.getElementById('navbar-bg');
+        
+        window.addEventListener('scroll', () => {
+            const isScrolled = window.scrollY > 50;
+            if (isScrolled) {
+                navbar.classList.add('shadow-md');
+                // Ensure we switch to 95 if not already
+                if (navbarBg.classList.contains('bg-sand-100/80')) {
+                    navbarBg.classList.remove('bg-sand-100/80');
+                    navbarBg.classList.add('bg-sand-100/95');
+                }
+            } else {
+                navbar.classList.remove('shadow-md');
+                // Ensure we switch to 80 if not already
+                if (navbarBg.classList.contains('bg-sand-100/95')) {
+                    navbarBg.classList.remove('bg-sand-100/95');
+                    navbarBg.classList.add('bg-sand-100/80');
+                }
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        // Data sources for galleries
+        const images = {
+            'aigaleo': [
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de90502f92641.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de9c778f92640.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9899b88b7787fd609.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9c086657ccec9eac3.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9772de97ba9f9263f.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9008498b5e4662646.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e9899b88c7057fd608.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699043e900849874b0662647.jpg"
+            ],
+            'ilisia': [
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c899b8801227fe27d.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c772de90b1bf93179.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449cc086658ea2c9f6db.jpg",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c899b884f1a7fe27f.jpg",
+                "https://picsum.photos/seed/office-degrees/800/600",
+                "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/6990449c24813c1062705d74.jpg"
+            ]
+        };
+
+        window.openLightbox = (index, location) => {
+            const src = images[location][index];
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            // Small timeout to allow display:block to apply before opacity transition
+            setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+            document.body.style.overflow = 'hidden';
+        };
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Carousel Logic
+        const reviewsContainer = document.getElementById('reviewsContainer');
+        const prevBtn = document.getElementById('prevReview');
+        const nextBtn = document.getElementById('nextReview');
+
+        nextBtn.addEventListener('click', () => {
+            reviewsContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            reviewsContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
